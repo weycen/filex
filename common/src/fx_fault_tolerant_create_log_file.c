@@ -307,7 +307,7 @@ UCHAR  cluster_state;
         _fx_utility_exFAT_bitmap_flush(media_ptr);
     }
 #endif /* FX_ENABLE_EXFAT */
-#endif
+#endif /* FX_FAULT_TOLERANT */
 
     /* Write start cluster for the file tolerant log file into the boot sector. */
     _fx_utility_32_unsigned_write(media_ptr -> fx_media_fault_tolerant_memory_buffer + FX_FAULT_TOLERANT_BOOT_INDEX, FAT_index);
